@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { fetchCategories } from '../fetch'
+import { fetchCategories } from '../services'
 
 export default function Categories() {
   const [categories, setCategories] = useState([])

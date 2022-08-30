@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { Categories, PostCard, PostWidget } from '../components'
-import { fetchPosts } from '../fetch'
+import { fetchPosts } from '../services'
 
 export default function Home({ posts }) {
   return (
