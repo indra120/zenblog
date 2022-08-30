@@ -1,11 +1,14 @@
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
-
-const categories = [
-  { name: 'React', slug: 'react' },
-  { name: 'Web Development', slug: 'web-dev' },
-]
+import { fetchCategories } from '../fetch'
 
 export default function Header() {
+  const [categories, setCategories] = useState([])
+
+  useEffect(() => {
+    fetchCategories().then(result => setCategories(result))
+  }, [])
+  
   return (
     <div className='container mx-auto px-10 mb-8'>
       <div className='border-b w-full inline-block border-blue-400 py-8'>
