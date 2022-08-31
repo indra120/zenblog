@@ -1,6 +1,6 @@
 import { endpoint, gql, request } from '.'
 
-export default async function fetchRecentPosts() {
+export default async function fetchCategories() {
   const query = gql`
     query FetchCategories {
       categories {
