@@ -2,7 +2,7 @@ import { endpoint, gql, request } from '.'
 
 export default async function fetchPosts(slug) {
   const query = gql`
-    query FetchPostDetails($slug: String) {
+    query FetchPostDetails($slug: String!) {
       post(where: { slug: $slug }) {
         author {
           bio

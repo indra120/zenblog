@@ -2,7 +2,7 @@ import { endpoint, gql, request } from '.'
 
 export default async function fetchSimilarPosts(categories, slug) {
   const query = gql`
-    query FetchSimilarPosts($categories: [String], $slug: String) {
+    query FetchSimilarPosts($categories: [String!], $slug: String!) {
       posts(
         where: {
           slug_not: $slug
